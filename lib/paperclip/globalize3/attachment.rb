@@ -29,9 +29,9 @@ module Paperclip
 
           @dirty = true
 
-          if post_processing &&
-              (Paperclip::Attachment.instance_method(:valid_assignment?).parameters.present? || # paperclip <=3.3 compatibility
-                  valid_assignment?)
+          if post_processing # &&
+          #     (Paperclip::Attachment.instance_method(:valid_assignment?).parameters.present? || # paperclip <=3.3 compatibility
+          #         valid_assignment?)
             post_process(*only_process)
           end
 
